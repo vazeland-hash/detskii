@@ -5,7 +5,9 @@
 
 /* ============ ОБЩАЯ ВИКТОРИНА ============ */
 
-\function startGame() {
+/* ============ ОБЩАЯ ВИКТОРИНА ============ */
+
+function startGame() {
   // Если это набор "animals", запускаем кастомную игру "Слова" из 5 уровней
   if (currentSetKey === 'animals') {
     startWordsLevels();
@@ -119,7 +121,7 @@ function renderWordsLevel() {
       const btn = document.createElement('button');
       btn.className = 'game-opt';
       btn.innerHTML = `<div class="animal-img">${opt.emoji}</div>`;
-      btn.addEventListener('click', () => handleWordsLvl1(i, card)); // Логика как в 1
+      btn.addEventListener('click', () => handleWordsLvl1(i, card));
       optsEl.appendChild(btn);
     });
     document.getElementById('help-btn').addEventListener('click', () => {
@@ -188,6 +190,7 @@ function handleWordsLvl1(idx, correct) {
 function handleWordsLvl2(idx, correct) {
   handleWordsLvl1(idx, correct);
 }
+
 
 function key(card) { return card.word.toLowerCase(); }
 
