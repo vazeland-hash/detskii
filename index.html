@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<base href="/detskii/">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Good Start Kids</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div class="mascot" id="mascot">🦊</div>
+
+<div class="screen active" id="screen-home">
+  <div class="logo">Good Start<small>English for kids</small></div>
+  <button class="menu-btn" data-section="words">
+    <span class="icon">📖</span>Учим слова
+  </button>
+  <button class="menu-btn" data-section="colors">
+    <span class="icon">🎨</span>Цвета и формы
+  </button>
+  <button class="menu-btn" data-section="numbers">
+    <span class="icon">🔢</span>Учим числа
+  </button>
+  <button class="menu-btn" id="btn-grammar" style="background: #F3E5F5; color: #6A1B9A;">
+    <span class="icon">📚</span>Грамматика
+  </button>
+  <div class="stars-display" id="home-stars">⭐ 0</div>
+  <div class="stars-display" id="home-words" style="margin-top:0; font-size:1.05rem; color:#2E7D32; background:rgba(232,245,233,0.95);">🔓 0 новых слов</div>
+</div>
+
+<div class="screen" id="screen-sets">
+  <button class="back-btn" data-back="home">← Назад</button>
+  <div class="section-title" id="sets-title"></div>
+  <div class="set-grid" id="set-grid"></div>
+</div>
+
+<div class="screen" id="screen-cards">
+  <button class="back-btn" data-back="sets">← Назад</button>
+  <div class="card-container">
+    <div class="big-card" id="big-card">
+      <div class="card-visual" id="card-visual"></div>
+      <div class="card-word" id="card-word"></div>
+      <div class="card-ru" id="card-ru"></div>
+    </div>
+    <div class="card-controls">
+      <button class="card-btn" id="card-prev" aria-label="Назад">⬅️</button>
+      <button class="card-btn speak-btn" id="card-speak" aria-label="Слушать">🔊</button>
+      <button class="card-btn" id="card-next" aria-label="Дальше">➡️</button>
+    </div>
+    <div class="card-progress" id="card-progress"></div>
+  </div>
+</div>
+
+<div class="screen" id="screen-game">
+  <button class="back-btn" data-back="cards">← Назад</button>
+  <div class="game-container" id="game-container"></div>
+</div>
+
+
+<!-- ИГРА ПРЕДЛОГИ -->
+<div class="screen" id="screen-prep-game">
+  <button class="back-btn" data-back="cards">← Назад</button>
+  <div class="prep-container">
+    <div class="game-progress" id="prep-progress"></div>
+    <div class="prep-prompt" id="prep-prompt"></div>
+    <div class="prep-scene-wrap">
+      <div class="prep-scene" id="prep-scene"></div>
+    </div>
+    <div class="prep-options" id="prep-options"></div>
+  </div>
+</div>
+
+<div class="screen" id="screen-shape-color">
+  <button class="back-btn" data-back="home">← Назад</button>
+  <div class="sc-container" id="sc-container"></div>
+</div>
+
+<div class="screen" id="screen-action">
+  <button class="back-btn" data-back="cards">← Назад</button>
+  <div class="action-container" id="action-container"></div>
+</div>
+
+<div class="screen" id="screen-num-game">
+  <button class="back-btn" data-back="sets">← Назад</button>
+  <div class="num-container" id="num-container"></div>
+</div>
+
+<!-- ГРАММАТИКА: выбор темы -->
+<div class="screen" id="screen-grammar-themes">
+  <button class="back-btn" data-back="home">← Назад</button>
+  <div class="section-title">Грамматика</div>
+  <div class="set-grid" id="grammar-theme-grid"></div>
+</div>
+
+<!-- ГРАММАТИКА: теория -->
+<div class="screen" id="screen-grammar-theory">
+  <button class="back-btn" data-back="grammar-themes">← Назад</button>
+  <div class="grammar-container" id="grammar-theory-container"></div>
+</div>
+
+<!-- ГРАММАТИКА: проверка -->
+<div class="screen" id="screen-grammar-game">
+  <button class="back-btn" data-back="grammar-theory">← Назад</button>
+  <div class="grammar-container" id="grammar-game-container"></div>
+</div>
+
+<div class="screen" id="screen-thermo-game">
+  <button class="back-btn" data-back="cards">← Назад</button>
+  <div class="thermo-container">
+    <div class="game-progress" id="thermo-progress"></div>
+    <div class="thermo-prompt" id="thermo-prompt"></div>
+    <div class="thermo-scene-wrap">
+      <div class="thermo-scene" id="thermo-scene"></div>
+    </div>
+    <div class="thermo-options" id="thermo-options"></div>
+  </div>
+</div>
+
+<div class="screen" id="screen-victory">
+  <div class="victory-emoji" id="victory-emoji">🎉</div>
+  <div class="victory-title" id="victory-title">Молодец!</div>
+  <div class="victory-sub" id="victory-sub"></div>
+  <div class="victory-star" id="victory-star">⭐</div>
+  <button class="menu-btn" id="victory-home" style="width:240px; padding:18px;">
+    <span class="icon">🏠</span>На главную
+  </button>
+</div>
+
+<!-- Порядок подключения важен -->
+<script src="js/svg-characters.js"></script>
+<script src="js/data.js"></script>
+<script src="js/core.js"></script>
+<script src="js/games.js"></script>
+<script src="js/grammar.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
