@@ -288,6 +288,22 @@ function showSets(sectionKey) {
 
   showScreen('sets');
 }
+/* ---------- Получение карточек набора (с учетом бонусов) ---------- */
+function getCards(sectionKey, setKey) {
+  const section = DATA[sectionKey];
+  if (!section || !section.sets[setKey]) return [];
+  
+  const set = section.sets[setKey];
+  let cards = [...set.cards];
+  
+  // Добавляем бонусные карточки, если они разблокированы
+  const unlockedCount = getUnlockedCount(sectionKey, setKey);
+  if (unlockedCount > 0 && set.bonus) {
+    cards = cards.concat(set.bonus.slice(0, unlockedCount));
+  }
+  
+  return cards;
+}
 
 function openCards(sectionKey, setKey) {
   currentSection = sectionKey;
