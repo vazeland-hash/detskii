@@ -95,7 +95,7 @@ const DATA = {
           { emoji: '👀', word: 'look',   ru: 'смотреть' },
           { img: 'images/climb.jpg', word: 'climb',  ru: 'лазить' },
           { img: 'images/fly.jpg',  word: 'fly',  ru: 'летать' },
-          { img: 'images/dive.jpg', word: 'dive', ru: 'нырять' }
+          { img: 'images/nuryat.jpg', word: 'dive', ru: 'нырять' }
         ]
       },
     }
